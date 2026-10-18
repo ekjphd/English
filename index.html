@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>English at UCF | Bachelor of Arts in English</title>
-  <meta name="description" content="The Bachelor of Arts in English at the University of Central Florida: tracks in Creative Writing, Literature, and Technical Communication.">
+  <meta name="description" content="The Bachelor of Arts in English at the University of Central Florida: tracks in Creative Writing, Literature, and Technical Communication, and seven minors.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
       <nav class="dept-nav" aria-label="On this page">
         <ul>
           <li><a href="#tracks">Tracks</a></li>
+          <li><a href="#minors">Minors</a></li>
           <li><a href="#courses">Courses</a></li>
           <li><a href="#distinctions">Distinctions</a></li>
           <li><a href="#careers">Careers</a></li>
@@ -36,110 +37,288 @@
 
 <main id="main">
 
+  <!-- Hero -->
   <section class="hero" aria-labelledby="hero-title">
     <div class="container">
-      <div class="hero-panel">
+      <div class="hero-top">
         <h1 id="hero-title">
-          <span class="hero-kicker">The Bachelor of Arts in</span>
+          <span class="hero-kicker">Department of</span>
           <span class="hero-word">English</span>
         </h1>
-        <div class="hero-body">
-          <p>Study creative writing, literature, or technical communication at the University of Central Florida, on campus or fully online.</p>
-          <div class="btn-row">
-            <a class="btn" href="#tracks">Explore the tracks</a>
-          </div>
+        <p class="tagline">Your story awaits.</p>
+      </div>
+
+      <div class="track-strip" data-active="0" role="region" aria-roledescription="carousel" aria-label="Featured tracks">
+        <div class="strip-tabs" role="tablist" aria-label="Choose a track">
+          <button type="button" role="tab" id="tab-0" aria-selected="true" aria-controls="slide-0">Creative Writing</button>
+          <button type="button" role="tab" id="tab-1" aria-selected="false" aria-controls="slide-1" tabindex="-1">Literature</button>
+          <button type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="slide-2" tabindex="-1">Tech Comm</button>
         </div>
+        <a class="strip-slide is-active" id="slide-0" role="tabpanel" aria-labelledby="tab-0" href="#creative-writing">
+          <span>Specialize in fiction, poetry, scriptwriting, or creative nonfiction.</span>
+          <em>View track</em>
+        </a>
+        <a class="strip-slide" id="slide-1" role="tabpanel" aria-labelledby="tab-1" href="#literature">
+          <span>Read across centuries, from Chaucer and Shakespeare to contemporary fiction.</span>
+          <em>View track</em>
+        </a>
+        <a class="strip-slide" id="slide-2" role="tabpanel" aria-labelledby="tab-2" href="#technical-communication">
+          <span>Write, design, and edit for technology, science, and industry.</span>
+          <em>View track</em>
+        </a>
+        <button type="button" class="strip-pause" aria-label="Pause rotation">&#10074;&#10074;</button>
       </div>
     </div>
   </section>
 
-  <section class="section" id="tracks" aria-labelledby="tracks-title">
+  <!-- Bookshelf -->
+  <section class="shelf-section" aria-labelledby="adventure-title">
+    <div class="container">
+      <h2 class="adventure" id="adventure-title">Choose your own adventure</h2>
+      <p class="adventure-sub">Pick one of three tracks for your English major, then add a minor if you like. Select any book to learn more.</p>
+
+      <ul class="shelf">
+        <li><a class="book track b-magenta" href="#creative-writing"><span class="bands"><span class="band"></span><span class="band"></span></span><span class="title">Creative Writing</span><span class="kind">Major</span></a></li>
+        <li><a class="book track b-sage" href="#literature"><span class="bands"><span class="band"></span><span class="band"></span></span><span class="title">Literature</span><span class="kind">Major</span></a></li>
+        <li><a class="book track b-navy" href="#technical-communication"><span class="bands"><span class="band"></span><span class="band"></span></span><span class="title">Technical Comm.</span><span class="kind">Major</span></a></li>
+        <li class="divider" aria-hidden="true"></li>
+        <li><a class="book b-mustard" href="#creative-writing-minor"><span class="bands"><span class="band"></span></span><span class="title">Creative Writing</span><span class="kind">Minor</span></a></li>
+        <li><a class="book b-teal" href="#digital-humanities"><span class="bands"><span class="band"></span></span><span class="title">Digital Humanities &amp; AI</span><span class="kind">Minor</span></a></li>
+        <li><a class="book b-coral" href="#florida-studies"><span class="bands"><span class="band"></span></span><span class="title">Florida Studies</span><span class="kind">Minor</span></a></li>
+        <li><a class="book b-sky" href="#linguistics"><span class="bands"><span class="band"></span></span><span class="title">Linguistics</span><span class="kind">Minor</span></a></li>
+        <li><a class="book b-brick" href="#literature-minor"><span class="bands"><span class="band"></span></span><span class="title">Literature</span><span class="kind">Minor</span></a></li>
+        <li><a class="book b-plum" href="#medieval-renaissance"><span class="bands"><span class="band"></span></span><span class="title">Medieval &amp; Renaissance</span><span class="kind">Minor</span></a></li>
+        <li><a class="book b-kraft" href="#technical-communication-minor"><span class="bands"><span class="band"></span></span><span class="title">Technical Comm.</span><span class="kind">Minor</span></a></li>
+      </ul>
+      <div class="shelf-legend"><span>Three tracks for the B.A. in English</span><span>Seven minors</span></div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="about" aria-labelledby="about-title">
+    <div class="container about-grid">
+      <div>
+        <h2 id="about-title">One of the largest English departments in the nation</h2>
+        <p class="statement">In an age shaped by technology and artificial intelligence, our graduates bring the skills that matter most: critical thinking, close reading, and a human-centered perspective.</p>
+      </div>
+      <ul class="facts">
+        <li><b>3 tracks</b>Creative Writing, Literature, and Technical Communication</li>
+        <li><b>7 minors</b>From Linguistics to Digital Humanities in the Age of AI</li>
+        <li><b>36 credits</b>in the major, as part of a 120-credit degree</li>
+        <li><b>Fully online</b>Every track can also be completed online through UCF Online</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Tracks -->
+  <section class="section alt" id="tracks" aria-labelledby="tracks-title">
     <div class="container">
       <h2 class="section-title" id="tracks-title">Tracks</h2>
-      <p class="section-intro">Every student earns a B.A. in English and chooses one of three tracks.</p>
+      <p class="section-intro">Every student earns a B.A. in English and chooses one of three tracks. Select a course to read its description.</p>
 
       <div class="grid grid-3">
-        <article class="track">
+
+        <!-- Creative Writing -->
+        <article class="track t-cw" id="creative-writing">
           <h3><small>English B.A.</small>Creative Writing</h3>
-          <p>Write fiction, poetry, creative nonfiction, and scripts. Students develop their craft in writing workshops and through close study of published work.</p>
-          <ul class="signature">
-            <li>Fiction, Poetry, and Scriptwriting Workshops</li>
-            <li>Creative Nonfiction Workshop</li>
-            <li>Worldbuilding</li>
-            <li>The Florida Review</li>
-          </ul>
-          <a class="more" href="https://www.ucf.edu/catalog/undergraduate/#/programs/Hyyrk-diu">Program requirements</a>
+          <p>Creative writing students choose a genre to specialize in and advance from introductory to advanced workshops, sharing original work and responding to the work of their peers.</p>
+          <div class="genres" aria-label="Genres">
+            <span>Fiction</span><span>Poetry</span><span>Scriptwriting</span><span>Creative Nonfiction</span>
+          </div>
+
+          <h4>Required courses</h4>
+          <div class="courses">
+            <details><summary><span class="code">CRW 3013</span>Creative Writing for English Majors</summary><p>An introduction to literary genres, with practice in critiquing peer writing and critical reading of established authors.</p></details>
+            <details><summary><span class="code">CRW 3053</span>Theory &amp; Practice of Creative Writing</summary><p>The genres and readings of contemporary creative writing, with attention to literary technique and current issues in the field.</p></details>
+            <details><summary><span class="code">ENG 3014</span>Theories and Techniques of Literature Study</summary><p>Techniques of analysis, theories of interpretation, and critical approaches to literature. It is the prerequisite for all 4000-level literature courses.</p></details>
+            <details><summary><span class="code">Workshops</span>Level I and Level II genre workshops</summary><p>Fiction (CRW 3120, 4122), Poetry (CRW 3310, 4320), Scriptwriting (CRW 3610, 4616), and Creative Nonfiction (CRW 3211, 4224). Level I pairs close reading of contemporary work with group critique. Level II offers intensive writing practice and peer critique of original manuscripts.</p></details>
+            <details><summary><span class="code">Lit. history</span>Four literature courses</summary><p>At least one course in literature written before 1865 and one written after, such as American Literature I or Modern American Poetry.</p></details>
+          </div>
+
+          <h4>Standout courses</h4>
+          <div class="courses">
+            <details><summary><span class="code">CRW 4125</span>Worldbuilding</summary><p>Techniques for building worlds across genres. In Spring 2027, the class builds a world together and each student writes a full-length project set in it.</p></details>
+            <details><summary><span class="code">CRW 3713</span>Writing for Video Games</summary><p>Game design and interactive storytelling. Students outline an original game and write scripts for its cut scenes and scripted events.</p></details>
+            <details><summary><span class="code">CRW 4724</span>The Florida Review</summary><p>Hands-on experience in editing, publishing, and producing UCF's national literary journal, including evaluating real submissions from working writers.</p></details>
+          </div>
+
+          <h4>Pairs well with</h4>
+          <div class="pairs">
+            <a href="#digital-humanities">Digital Humanities &amp; AI</a>
+            <a href="#literature-minor">Literature</a>
+            <a href="#linguistics">Linguistics</a>
+          </div>
+          <a class="more" href="https://www.ucf.edu/catalog/undergraduate/#/programs/Hyyrk-diu">Full program requirements</a>
         </article>
-        <article class="track">
+
+        <!-- Literature -->
+        <article class="track t-lit" id="literature">
           <h3><small>English B.A.</small>Literature</h3>
-          <p>Read discerningly, think critically, and write clearly. Students study literature in its historical, cultural, and theoretical contexts, from the Middle Ages to the present.</p>
-          <ul class="signature">
-            <li>Shakespeare Studies</li>
-            <li>Gothic Literature</li>
-            <li>Literature and Law</li>
-            <li>Caribbean Literature</li>
-          </ul>
-          <a class="more" href="https://www.ucf.edu/catalog/undergraduate/#/programs/B1OUlAwnu">Program requirements</a>
+          <p>Literature students learn to read discerningly, think critically, and write clearly. They study literature in its historical, cultural, and theoretical contexts, from the Middle Ages to the present.</p>
+
+          <h4>Required courses</h4>
+          <div class="courses">
+            <details><summary><span class="code">ENG 3014</span>Theories and Techniques of Literature Study</summary><p>Techniques of analysis, theories of interpretation, and critical approaches to literature. It is the prerequisite for all 4000-level literature courses.</p></details>
+            <details><summary><span class="code">LIT 3212</span>Research &amp; Writing About Literature</summary><p>Research, writing, and critical analysis skills for upper-level literature courses. Students may take a creative writing or technical writing course instead.</p></details>
+            <details><summary><span class="code">Lit. history</span>Five literature courses</summary><p>At least two courses in literature written before 1865 and two written after, such as English Renaissance Poetry and Prose, Narratives of Slavery, or Post-World War II Fiction.</p></details>
+            <details><summary><span class="code">Author</span>A major author course</summary><p>An in-depth study of one major author, such as Shakespeare, Chaucer, or Milton, or a course in Major American, British, or World Authors.</p></details>
+            <details><summary><span class="code">Language</span>A linguistics or theory course</summary><p>For example, Principles of Linguistics, History of the English Language, Modern English Grammar, or Practical Criticism.</p></details>
+          </div>
+
+          <h4>Standout courses</h4>
+          <div class="courses">
+            <details><summary><span class="code">ENL 4333</span>Shakespeare Studies</summary><p>Reading, analysis, and discussion of Shakespeare's plays, with attention to his language, cultural context, and themes such as kingship, love, and revenge.</p></details>
+            <details><summary><span class="code">ENL 3296</span>Gothic Literature</summary><p>Gothic prose, poetry, and drama from the British Isles and the cultural contexts that produced them.</p></details>
+            <details><summary><span class="code">LIT 3933</span>Literature and Law</summary><p>Law, crime, and punishment in literature. Recent sections have examined vigilantes, avengers, and how literature defines justice.</p></details>
+            <details><summary><span class="code">LIT 3192</span>Caribbean Literature</summary><p>How Caribbean societies have achieved self-expression through documentary writing, fiction, and popular culture.</p></details>
+          </div>
+
+          <h4>Pairs well with</h4>
+          <div class="pairs">
+            <a href="#creative-writing-minor">Creative Writing</a>
+            <a href="#medieval-renaissance">Medieval &amp; Renaissance</a>
+            <a href="#linguistics">Linguistics</a>
+          </div>
+          <a class="more" href="https://www.ucf.edu/catalog/undergraduate/#/programs/B1OUlAwnu">Full program requirements</a>
         </article>
-        <article class="track">
+
+        <!-- Technical Communication -->
+        <article class="track t-tc" id="technical-communication">
           <h3><small>English B.A.</small>Technical Communication</h3>
-          <p>Write, design, and edit documents, websites, and visuals that make complex information clear. Students complete projects for real clients.</p>
-          <ul class="signature">
-            <li>Visual Technical Communication</li>
-            <li>Usability Testing for Technical Communication</li>
-            <li>Writing for the Computer Industry</li>
-            <li>Client-Based Project Management</li>
-          </ul>
-          <a class="more" href="https://www.ucf.edu/catalog/undergraduate/#/programs/B1w1HkWuiO">Program requirements</a>
+          <p>Technical communication students learn to write, design, and edit documents, websites, and visuals that make complex information clear, and they complete projects for real clients.</p>
+
+          <h4>Required courses</h4>
+          <div class="courses">
+            <details><summary><span class="code">ENC 3241</span>Writing for the Technical Professional</summary><p>Writing effective correspondence, instructions, proposals, and reports in the role of a professional technical communicator.</p></details>
+            <details><summary><span class="code">ENC 4280</span>Technical Writing Style</summary><p>Strategies for understanding and improving style across a variety of technical writing genres.</p></details>
+            <details><summary><span class="code">ENC 4293</span>Documentation and Project Management</summary><p>Development of a book-length project from idea to published product, such as a style manual or training manual.</p></details>
+            <details><summary><span class="code">ENC 4294</span>Client-Based Project Management</summary><p>Team-based planning, design, and development of documents for an industry or nonprofit client, ending in a final published product.</p></details>
+            <details><summary><span class="code">LIT 4433</span>Literature of Science and Technology</summary><p>Major works of fiction and nonfiction about the history, philosophy, politics, and new ideas of science and technology.</p></details>
+            <details><summary><span class="code">ENC 4215 / 4218</span>Document Design or Visual Technical Communication</summary><p>Either the design and publication of technical documents, or the design of informational graphics and visual displays of technical information.</p></details>
+          </div>
+
+          <h4>Standout courses</h4>
+          <div class="courses">
+            <details><summary><span class="code">ENC 4290</span>Usability Testing for Technical Communication</summary><p>Usability theory and techniques for evaluating manuals, online documentation, and other technical communication.</p></details>
+            <details><summary><span class="code">ENC 4265</span>Writing for the Computer Industry</summary><p>Creating software manuals, online help systems, and other documentation for programming, software development, and information technology.</p></details>
+            <details><summary><span class="code">ENC 4414</span>Writing and Hypertext</summary><p>Writing and HTML/CSS coding for online environments, hypertext architecture, and electronic literacy.</p></details>
+          </div>
+
+          <h4>Pairs well with</h4>
+          <div class="pairs">
+            <a href="#digital-humanities">Digital Humanities &amp; AI</a>
+            <a href="#linguistics">Linguistics</a>
+            <a href="#creative-writing-minor">Creative Writing</a>
+          </div>
+          <a class="more" href="https://www.ucf.edu/catalog/undergraduate/#/programs/B1w1HkWuiO">Full program requirements</a>
         </article>
       </div>
-
-      <p class="footnote">The department also offers seven minors, including Creative Writing, Linguistics, and Digital Humanities in the Age of AI. <a href="https://cah.ucf.edu/english/undergraduate/#minors">View all minors</a>.</p>
     </div>
   </section>
 
+  <!-- Minors -->
+  <section class="section paper" id="minors" aria-labelledby="minors-title">
+    <div class="container">
+      <h2 class="section-title" id="minors-title">Minors</h2>
+      <p class="section-intro">Each minor is 18 credit hours and pairs well with English or with majors across UCF.</p>
+
+      <div class="minor-grid">
+        <article class="minor m-mustard" id="creative-writing-minor">
+          <h3>Creative Writing</h3>
+          <div class="credits">18 credit hours</div>
+          <p>For aspiring writers of fiction, poetry, and creative nonfiction, with workshops at two levels.</p>
+          <p class="try"><b>Highlights:</b> Literary Magazines, The Florida Review, Editing for Creative Writers</p>
+          <a href="https://www.ucf.edu/catalog/undergraduate/#/programs/rkeurkWdou">Minor requirements</a>
+        </article>
+        <article class="minor m-teal" id="digital-humanities">
+          <h3>Digital Humanities in the Age of AI</h3>
+          <div class="credits">18 credit hours</div>
+          <p>Use code, text, images, and AI tools to build humanities projects and study digital culture, from social media to video games.</p>
+          <p class="try"><b>Highlights:</b> Digital Humanities Approaches to AI, Fan Studies, Literary Gaming</p>
+          <a href="https://www.ucf.edu/catalog/undergraduate/#/programs/Bk-_rJWOj_">Minor requirements</a>
+        </article>
+        <article class="minor m-coral" id="florida-studies">
+          <h3>Florida Studies</h3>
+          <div class="credits">18 credit hours</div>
+          <p>The history, literature, politics, art, culture, and environment of Florida.</p>
+          <p class="try"><b>Highlights:</b> Florida Writers, U.S. Space History, Art of Walt Disney</p>
+          <a href="https://www.ucf.edu/catalog/undergraduate/#/programs/SJX81-_od">Minor requirements</a>
+        </article>
+        <article class="minor m-sky" id="linguistics">
+          <h3>Linguistics</h3>
+          <div class="credits">18 credit hours</div>
+          <p>The scientific study of language, from sounds and words to meaning and how language changes over time.</p>
+          <p class="try"><b>Highlights:</b> Principles of Linguistics, History of the English Language</p>
+          <a href="https://cah.ucf.edu/english/undergraduate/linguistics-minor/">Minor details</a>
+        </article>
+        <article class="minor m-brick" id="literature-minor">
+          <h3>Literature</h3>
+          <div class="credits">18 credit hours</div>
+          <p>Think critically about texts and write clearly, studying literature in its historical, cultural, and theoretical contexts.</p>
+          <p class="try"><b>Highlights:</b> Choose five literature courses that interest you</p>
+          <a href="https://www.ucf.edu/catalog/undergraduate/#/programs/BJdB1Wdjd">Minor requirements</a>
+        </article>
+        <article class="minor m-plum" id="medieval-renaissance">
+          <h3>Medieval and Renaissance Studies</h3>
+          <div class="credits">18 credit hours</div>
+          <p>The art, history, literature, languages, and philosophy of the era from the fall of Rome to the 1600s.</p>
+          <p class="try"><b>Highlights:</b> King Arthur, Chaucer, Dante, Shakespeare</p>
+          <a href="https://cah.ucf.edu/medieval/">Program website</a>
+        </article>
+        <article class="minor m-kraft" id="technical-communication-minor">
+          <h3>Technical Communication</h3>
+          <div class="credits">18 credit hours</div>
+          <p>Writing and communication skills for technical and scientific careers, presenting text and visuals clearly to many audiences.</p>
+          <p class="try"><b>Highlights:</b> Client-Based Project Management, Visual Technical Communication</p>
+          <a href="https://www.ucf.edu/catalog/undergraduate/#/programs/H1ZIJbuid">Minor requirements</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured courses -->
   <section class="section alt" id="courses" aria-labelledby="courses-title">
     <div class="container">
       <h2 class="section-title" id="courses-title">Featured Courses</h2>
       <p class="section-intro">A selection of courses on the department's 2026–2027 schedule.</p>
 
       <div class="grid grid-4">
-        <article class="course">
+        <article class="course-card">
           <div class="code">ENL 3451, Spring 2027</div>
           <h3>Tolkien's Bookshelf</h3>
           <p>The poetry and legends that shaped Middle-earth, and how Tolkien drew on them to build his world.</p>
         </article>
-        <article class="course">
+        <article class="course-card">
           <div class="code">LIT 3482, Spring 2027</div>
           <h3>Zombies: Undead Media from the Gothic to the Algorithm</h3>
           <p>The zombie in literature, film, and games, from Haitian Vodou narratives to post-apocalyptic fiction.</p>
         </article>
-        <article class="course">
+        <article class="course-card">
           <div class="code">CRW 4125, Spring 2027</div>
           <h3>Worldbuilding</h3>
           <p>The class builds a world together, and each student writes a full-length project set in it.</p>
         </article>
-        <article class="course">
+        <article class="course-card">
           <div class="code">CRW 3713, Fall 2026</div>
           <h3>Writing for Video Games</h3>
           <p>Game design and interactive storytelling. Students outline their own game and script its cut scenes.</p>
         </article>
-        <article class="course">
+        <article class="course-card">
           <div class="code">ENG 3861, Spring 2027</div>
           <h3>Digital Humanities Approaches to AI</h3>
           <p>The history of artificial intelligence, its effect on culture and creativity, and its use in literary research.</p>
         </article>
-        <article class="course">
+        <article class="course-card">
           <div class="code">LIN 4660, Spring 2027</div>
           <h3>Linguistics and Literature</h3>
           <p>Students research word histories for the Oxford English Dictionary and help build Noah Webster's Dictionary Online.</p>
         </article>
-        <article class="course">
+        <article class="course-card">
           <div class="code">LIT 3931, Summer 2026</div>
           <h3>Viking Literature: Myths, Legends, and Sagas</h3>
           <p>Stories of Thor, Odin, and Loki, legendary heroes, and the sagas of the Icelanders.</p>
         </article>
-        <article class="course">
+        <article class="course-card">
           <div class="code">ENL 4303, Spring 2027</div>
           <h3>British Authors: Jane Austen</h3>
           <p>All six of Austen's published novels, from <em>Northanger Abbey</em> to <em>Persuasion</em>.</p>
@@ -150,6 +329,7 @@
     </div>
   </section>
 
+  <!-- Distinctions -->
   <section class="section" id="distinctions" aria-labelledby="distinctions-title">
     <div class="container">
       <h2 class="section-title" id="distinctions-title">Distinctions</h2>
@@ -163,7 +343,7 @@
         </article>
         <article class="distinction">
           <h3>The Florida Review</h3>
-          <p>Students intern with UCF's literary journal. They evaluate submissions from working writers and help produce each issue.</p>
+          <p>Students intern with UCF's national literary journal. They evaluate submissions from working writers and help produce each issue.</p>
           <a href="https://floridareview.cah.ucf.edu/">Visit the journal</a>
         </article>
         <article class="distinction">
@@ -180,7 +360,8 @@
     </div>
   </section>
 
-  <section class="section alt" id="careers" aria-labelledby="careers-title">
+  <!-- Careers -->
+  <section class="section paper" id="careers" aria-labelledby="careers-title">
     <div class="container careers">
       <div>
         <h2 class="section-title" id="careers-title">Careers</h2>
@@ -202,6 +383,7 @@
     </div>
   </section>
 
+  <!-- Apply -->
   <section class="apply" id="apply" aria-labelledby="apply-title">
     <div class="container">
       <h2 class="section-title" id="apply-title">Apply</h2>
@@ -221,5 +403,7 @@
     <p>Program details come from the <a href="https://www.ucf.edu/catalog/undergraduate/">2026–2027 UCF Undergraduate Catalog</a> and the <a href="https://cah.ucf.edu/english/">Department of English</a> website. The catalog is the official source for degree requirements.</p>
   </div>
 </footer>
+
+<script src="assets/site.js"></script>
 </body>
 </html>
