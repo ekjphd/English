@@ -378,8 +378,6 @@ function wireDom() {
 
 // Replace the short course summaries with the department's own descriptions (assets/courses.json,
 // refreshed by tools/fetch_courses.py). Courses without a current description keep their summary.
-const SHOWN_PER_COURSE = 2;
-
 async function loadCourseDescriptions() {
   let data;
   try {
@@ -401,21 +399,10 @@ async function loadCourseDescriptions() {
       body.className = 'course-desc';
       let described = false;
       found.forEach(({ label, course }) => {
-        if (!course.descriptions.length) return;
+        if (!course.description.length) return;
         if (found.length > 1 || m[3]) addEl(body, 'h5', `${label}: ${course.title}`);
-        // Instructors write their own section descriptions; separate the versions with a rule.
-        course.descriptions.slice(0, SHOWN_PER_COURSE).forEach((paragraphs, i) => {
-          if (i > 0) addEl(body, 'hr', '');
-          paragraphs.forEach((text) => addEl(body, 'p', text));
-          described = true;
-        });
-        const more = course.descriptions.length - SHOWN_PER_COURSE;
-        if (more > 0) {
-          const note = addEl(body, 'p', '');
-          note.className = 'more-sections';
-          const link = addEl(note, 'a', `${more} more section description${more > 1 ? 's' : ''} in the course listings`);
-          link.href = data.source;
-        }
+        course.description.forEach((text) => addEl(body, 'p', text));
+        described = true;
       });
       const summary = det.querySelector(':scope > p');
       if (described && summary) summary.replaceWith(body);

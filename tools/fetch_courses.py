@@ -21,12 +21,6 @@ PAGE = 'https://cah.ucf.edu/english/courses/'
 OUT = Path(__file__).resolve().parent.parent / 'assets' / 'courses.json'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (UCF English course list refresh)'}
 SEASONS = {'Spring': 0, 'Summer': 1, 'Fall': 2}
-MODES = {
-    'Asynchronous Online (W)': 'Online',
-    'Synchronous Online (S)': 'Online, live sessions',
-    'In Person (P)': 'In person',
-    'Mixed Mode (M)': 'Mixed mode',
-}
 
 
 def get(url, data=None):
@@ -89,30 +83,21 @@ def main():
     }).encode()
     sections = json.loads(get(wp['ajaxurl'], form)).values()
 
-    courses = {}
+    # Each course keeps a single description: the one from its most recent term that has one.
+    # Within a term, the first section listed wins.
+    out = {}
+    latest = {}
     for sec in sections:
         code = sec['course']
-        course = courses.setdefault(code, {'title': sec['title'], 'terms': set(), 'groups': {}})
-        course['terms'].add(sec['term'])
+        out.setdefault(code, {'title': sec['title'], 'description': []})
         paras = paragraphs(sec['description'])
-        if not paras:
-            continue
-        # Sections that share a description are listed once, with every term and format they run in.
-        group = course['groups'].setdefault('\n'.join(paras), {'terms': set(), 'modes': set(), 'paragraphs': paras})
-        group['terms'].add(sec['term'])
-        group['modes'].add(MODES.get(sec['mode'], sec['mode']))
+        if paras and (code not in latest or term_key(sec['term']) > latest[code]):
+            latest[code] = term_key(sec['term'])
+            out[code]['description'] = paras
 
-    out = {}
-    for code, c in sorted(courses.items()):
-        groups = sorted(c['groups'].values(), key=lambda g: min(term_key(t) for t in g['terms']))
-        out[code] = {
-            'title': c['title'],
-            'descriptions': [g['paragraphs'] for g in groups],
-        }
-
-    data = {'source': PAGE, 'courses': out}
+    data = {'source': PAGE, 'courses': dict(sorted(out.items()))}
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
-    described = sum(1 for c in out.values() if c['descriptions'])
+    described = sum(1 for c in out.values() if c['description'])
     print(f'Wrote {len(out)} courses ({described} with descriptions) to {OUT}')
 
 
