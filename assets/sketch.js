@@ -376,14 +376,14 @@ function wireDom() {
   loadCourseDescriptions();
 }
 
-// Replace the short course summaries with the department's own descriptions (courses.json,
+// Replace the short course summaries with the department's own descriptions (assets/courses.json,
 // refreshed by tools/fetch_courses.py). Courses without a current description keep their summary.
 const SHOWN_PER_COURSE = 2;
 
 async function loadCourseDescriptions() {
   let data;
   try {
-    data = await (await fetch('courses.json')).json();
+    data = await (await fetch('assets/courses.json')).json();
   } catch (err) {
     return;
   }

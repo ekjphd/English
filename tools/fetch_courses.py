@@ -3,7 +3,7 @@
 The listings at https://cah.ucf.edu/english/courses/ load their table from the
 site's WordPress AJAX endpoint. This script makes the same request the page
 makes, cleans the descriptions to plain paragraphs, and writes
-prototype/courses.json, which sketch.js reads to fill in the program panels.
+assets/courses.json, which assets/sketch.js reads to fill in the program panels.
 
 Run it again each semester to refresh the descriptions:
 
@@ -18,7 +18,7 @@ import urllib.request
 from pathlib import Path
 
 PAGE = 'https://cah.ucf.edu/english/courses/'
-OUT = Path(__file__).resolve().parent.parent / 'prototype' / 'courses.json'
+OUT = Path(__file__).resolve().parent.parent / 'assets' / 'courses.json'
 HEADERS = {'User-Agent': 'Mozilla/5.0 (UCF English course list refresh)'}
 SEASONS = {'Spring': 0, 'Summer': 1, 'Fall': 2}
 MODES = {

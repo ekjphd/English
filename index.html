@@ -1,103 +1,74 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>English at UCF | Bachelor of Arts in English</title>
-  <meta name="description" content="The Bachelor of Arts in English at the University of Central Florida: tracks in Creative Writing, Literature, and Technical Communication, and seven minors.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500&family=League+Gothic&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/style.css">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>English at UCF</title>
+<meta name="description" content="Explore the three tracks of the English B.A. and the seven minors offered by the Department of English at UCF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Special+Elite&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<a class="skip-link" href="#program-shelf">Skip to programs</a>
+<h1 class="visually-hidden">English at UCF</h1>
+<div class="visually-hidden">
+  <p id="intro-text">As one of the largest English departments in the nation, we offer something for every student. In an age shaped by technology and artificial intelligence, our graduates bring the skills that matter most: critical thinking, close reading, and a human-centered perspective.</p>
+  <p>Your story awaits...</p>
+</div>
 
-<header>
-  <div class="ucf-bar">
-    <div class="container"><a href="https://www.ucf.edu/">University of Central Florida</a></div>
+<main class="bookcase">
+  <div class="tier filler top" aria-hidden="true"><div class="bay g"></div><div class="bay g"></div><div class="bay g"></div></div>
+  <div class="plank labeled">
+    <h2 class="label-plate" id="shelf-label"><span>Choose your own adventure</span></h2>
   </div>
-  <div class="dept-bar">
-    <div class="container">
-      <a class="dept-name" href="https://cah.ucf.edu/english/">English Department</a>
-      <nav class="dept-nav" aria-label="On this page">
-        <ul>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#distinctions">Distinctions</a></li>
-          <li><a href="#careers">Careers</a></li>
-          <li><a href="#apply">Apply</a></li>
-        </ul>
-      </nav>
-    </div>
+  <div class="tier program">
+    <div class="bay g" aria-hidden="true"></div>
+    <nav class="bay books" id="program-shelf" aria-labelledby="shelf-label">
+      <span class="bookend" aria-hidden="true"></span>
+      <button type="button" class="spine major" data-open="creative-writing" style="--hn:0.95;--i:0"><span class="kind">Major</span><span class="title">Creative Writing</span></button>
+      <button type="button" class="spine major" data-open="literature" style="--hn:0.9;--i:1"><span class="kind">Major</span><span class="title">Literature</span></button>
+      <button type="button" class="spine major" data-open="technical-communication" style="--hn:0.97;--i:2"><span class="kind">Major</span><span class="title">Technical Communication</span></button>
+      <span class="bookend" aria-hidden="true"></span>
+      <span class="shelf-break narrow-only" aria-hidden="true"></span>
+      <div class="stack">
+        <button type="button" class="spine flat" data-open="creative-writing-minor" style="--w:86%;--i:3"><span class="kind">Minor</span><span class="title">Creative Writing</span></button>
+        <button type="button" class="spine flat" data-open="literature-minor" style="--w:93%;--i:4"><span class="kind">Minor</span><span class="title">Literature</span></button>
+        <button type="button" class="spine flat" data-open="technical-communication-minor" style="--w:100%;--i:5"><span class="kind">Minor</span><span class="title">Technical Communication</span></button>
+      </div>
+      <span class="shelf-break" aria-hidden="true"></span>
+      <button type="button" class="spine minor" data-open="digital-humanities" style="--hn:0.9;--i:6"><span class="kind">Minor</span><span class="title">Digital Humanities in the Age of AI</span></button>
+      <button type="button" class="spine minor" data-open="florida-studies" style="--hn:0.78;--i:7"><span class="kind">Minor</span><span class="title">Florida Studies</span></button>
+      <button type="button" class="spine minor" data-open="linguistics" style="--hn:0.84;--i:8"><span class="kind">Minor</span><span class="title">Linguistics</span></button>
+      <button type="button" class="spine minor" data-open="medieval-renaissance" style="--hn:0.94;--i:9"><span class="kind">Minor</span><span class="title">Medieval and Renaissance Studies</span></button>
+      <span class="bookend" aria-hidden="true"></span>
+    </nav>
+    <div class="bay g" aria-hidden="true"></div>
   </div>
-</header>
+  <div class="plank" aria-hidden="true"></div>
+  <div class="lower" aria-hidden="true">
+    <div class="tier"><div class="bay g"></div><div class="bay g"></div><div class="bay g"></div></div>
+    <div class="plank"></div>
+    <div class="tier"><div class="bay g"></div><div class="bay g"></div><div class="bay g"></div></div>
+  </div>
+</main>
 
-<main id="main">
+<div class="veil" aria-hidden="true"></div>
+<div id="stage" aria-hidden="true"></div>
+<button type="button" class="skip-intro">Skip introduction</button>
 
-  <!-- Hero -->
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="container">
-      <div class="hero-top">
-        <h1 id="hero-title">
-          <span class="hero-kicker">Department of</span>
-          <span class="hero-word">English</span>
-        </h1>
-        <p class="tagline">Your story awaits.</p>
-      </div>
+<footer class="site-foot">
+  <a href="https://cah.ucf.edu/english/">Department of English</a>
+  <a href="https://www.ucf.edu/catalog/undergraduate/">Undergraduate catalog</a>
+  <a href="https://www.ucf.edu/admissions/undergraduate/">Apply to UCF</a>
+  <button type="button" class="replay">Replay introduction</button>
+</footer>
 
-      <div class="track-strip" data-active="0" role="region" aria-roledescription="carousel" aria-label="Featured tracks">
-        <div class="strip-tabs" role="tablist" aria-label="Tracks">
-          <button type="button" role="tab" id="tab-0" aria-selected="true" aria-controls="slide-0">Creative Writing</button>
-          <button type="button" role="tab" id="tab-1" aria-selected="false" aria-controls="slide-1" tabindex="-1">Literature</button>
-          <button type="button" role="tab" id="tab-2" aria-selected="false" aria-controls="slide-2" tabindex="-1">Technical Communication</button>
-        </div>
-        <a class="strip-slide is-active" id="slide-0" role="tabpanel" aria-labelledby="tab-0" href="#creative-writing" data-open="creative-writing">
-          <span>Specialize in fiction, poetry, scriptwriting, or creative nonfiction.</span>
-          <em>View track</em>
-        </a>
-        <a class="strip-slide" id="slide-1" role="tabpanel" aria-labelledby="tab-1" href="#literature" data-open="literature">
-          <span>Read across centuries, from Chaucer and Shakespeare to contemporary fiction.</span>
-          <em>View track</em>
-        </a>
-        <a class="strip-slide" id="slide-2" role="tabpanel" aria-labelledby="tab-2" href="#technical-communication" data-open="technical-communication">
-          <span>Write, design, and edit for technology, science, and industry.</span>
-          <em>View track</em>
-        </a>
-        <button type="button" class="strip-pause" aria-label="Pause rotation">&#10074;&#10074;</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- About + bookshelf -->
-  <section class="programs" id="programs" aria-labelledby="about-title">
-    <div class="container">
-      <div class="about">
-        <h2 id="about-title">One of the largest English departments in the nation</h2>
-        <p>In an age shaped by technology and artificial intelligence, our graduates bring the skills that matter most: critical thinking, close reading, and a human-centered perspective.</p>
-        <p>Students earn a Bachelor of Arts in English in one of three tracks, and the department offers seven minors. Select a book below to learn more.</p>
-      </div>
-
-      <h3 class="adventure">Choose your own adventure</h3>
-      <div class="shelf">
-        <div class="uprights" role="group" aria-label="Tracks for the B.A. in English">
-<button type="button" class="book b-magenta" data-open="creative-writing" aria-controls="creative-writing" aria-expanded="false"><span class="kind">Major</span><span class="band"></span><span class="title">Creative Writing</span><span class="band"></span></button>
-<button type="button" class="book b-sage" data-open="literature" aria-controls="literature" aria-expanded="false"><span class="kind">Major</span><span class="band"></span><span class="title">Literature</span><span class="band"></span></button>
-<button type="button" class="book b-navy" data-open="technical-communication" aria-controls="technical-communication" aria-expanded="false"><span class="kind">Major</span><span class="band"></span><span class="title">Technical Communication</span><span class="band"></span></button>
-        </div>
-        <div class="stack" role="group" aria-label="Minors">
-<button type="button" class="flat b-mustard" style="margin-left:0%;width:92%" data-open="creative-writing-minor" aria-controls="creative-writing-minor" aria-expanded="false"><span class="kind">Minor</span><span class="title">Creative Writing</span></button>
-<button type="button" class="flat b-teal" style="margin-left:6%;width:86%" data-open="digital-humanities" aria-controls="digital-humanities" aria-expanded="false"><span class="kind">Minor</span><span class="title">Digital Humanities in the Age of AI</span></button>
-<button type="button" class="flat b-coral" style="margin-left:2%;width:94%" data-open="florida-studies" aria-controls="florida-studies" aria-expanded="false"><span class="kind">Minor</span><span class="title">Florida Studies</span></button>
-<button type="button" class="flat b-sky" style="margin-left:9%;width:84%" data-open="linguistics" aria-controls="linguistics" aria-expanded="false"><span class="kind">Minor</span><span class="title">Linguistics</span></button>
-<button type="button" class="flat b-brick" style="margin-left:4%;width:90%" data-open="literature-minor" aria-controls="literature-minor" aria-expanded="false"><span class="kind">Minor</span><span class="title">Literature</span></button>
-<button type="button" class="flat b-plum" style="margin-left:1%;width:96%" data-open="medieval-renaissance" aria-controls="medieval-renaissance" aria-expanded="false"><span class="kind">Minor</span><span class="title">Medieval and Renaissance Studies</span></button>
-<button type="button" class="flat b-kraft" style="margin-left:7%;width:88%" data-open="technical-communication-minor" aria-controls="technical-communication-minor" aria-expanded="false"><span class="kind">Minor</span><span class="title">Technical Communication</span></button>
-        </div>
-      </div>
-
-      <div class="panels">
+<div class="modal" role="dialog" aria-modal="true" hidden>
+<div class="modal-backdrop"></div>
+<div class="modal-sheet">
 <section class="panel c-magenta" id="creative-writing" aria-labelledby="creative-writing-title" hidden>
 <div class="panel-head">
 <p class="panel-label">English B.A. track</p>
@@ -493,111 +464,10 @@
 <details><summary><span class="code">ENC 4414</span><span class="ctitle">Writing and Hypertext</span></summary><p>Writing and HTML/CSS coding for online environments.</p></details>
 </div>
 </div></div></section>
-      </div>
-    </div>
-  </section>
+</div>
+</div>
 
-  <!-- Featured courses -->
-  <section class="section alt" id="courses" aria-labelledby="courses-title">
-    <div class="container">
-      <h2 class="section-title" id="courses-title">Featured Courses</h2>
-      <p class="section-intro">A selection of courses on the department's 2026–2027 schedule. Select a course to read more.</p>
-
-      <div class="card-grid">
-        <details class="card"><summary><span class="code">ENL 3451, Spring 2027</span><span class="ctitle">Tolkien's Bookshelf</span><span class="teaser">The poetry and legends that shaped Middle-earth.</span></summary>
-          <p>A section of Topics in British Literature that studies the older poetry and legends Tolkien drew on to build Middle-earth, starting from moments such as the lament Aragorn chants as he approaches Théoden's hall. It counts as pre-1865 literature.</p></details>
-        <details class="card"><summary><span class="code">LIT 3482, Spring 2027</span><span class="ctitle">Zombies: Undead Media from the Gothic to the Algorithm</span><span class="teaser">The zombie in literature, film, and games.</span></summary>
-          <p>A section of Literature &amp; Popular Culture that traces the undead from Haitian Vodou narratives and Gothic fiction to graphic novels and post-apocalyptic stories, asking how the zombie expresses real anxieties about systemic failure and public health.</p></details>
-        <details class="card"><summary><span class="code">CRW 4125, Spring 2027</span><span class="ctitle">Worldbuilding</span><span class="teaser">Build a world together, then write in it.</span></summary>
-          <p>Students read fiction, essays, theory, and poetry about how writers craft immersive worlds. The class builds a world together, and each student writes a full-length project set in it. The course will likely include a visit to the university archives.</p></details>
-        <details class="card"><summary><span class="code">CRW 3713, Fall 2026</span><span class="ctitle">Writing for Video Games</span><span class="teaser">Design a game and write its story.</span></summary>
-          <p>An introduction to game design, including brainstorming, gameplay, artificial intelligence, and storytelling in interactive systems. Students conceive and outline their own game and write interactive scripts for cut scenes and scripted events, which are workshopped in class.</p></details>
-        <details class="card"><summary><span class="code">ENG 3861, Spring 2027</span><span class="ctitle">Digital Humanities Approaches to AI</span><span class="teaser">How AI is changing culture and creativity.</span></summary>
-          <p>Students explore the history of artificial intelligence and its effect on culture and creativity. They practice using AI tools in digital humanities projects, learn the opportunities and limits of these tools, and document their own use of AI.</p></details>
-        <details class="card"><summary><span class="code">LIN 4660, Spring 2027</span><span class="ctitle">Linguistics and Literature</span><span class="teaser">Research for the Oxford English Dictionary.</span></summary>
-          <p>Students research earlier uses of words for the Oxford English Dictionary, then join the team preparing Noah Webster's Dictionary Online, an NEH-funded project. Work includes archival research, proofreading, XML markup, image editing, and beta testing.</p></details>
-        <details class="card"><summary><span class="code">LIT 3931, Summer 2026</span><span class="ctitle">Viking Literature: Myths, Legends, and Sagas</span><span class="teaser">Thor, Odin, Loki, and the Icelandic sagas.</span></summary>
-          <p>An introduction to Old Norse literature: myths of Thor, Odin, and Loki, tales of legendary heroes and cursed swords, and the sagas of the Icelanders, which may be the earliest examples of historical fiction.</p></details>
-        <details class="card"><summary><span class="code">ENL 4303, Spring 2027</span><span class="ctitle">British Authors: Jane Austen</span><span class="teaser">All six of Austen's published novels.</span></summary>
-          <p>Students read <em>Northanger Abbey</em>, <em>Sense and Sensibility</em>, <em>Pride and Prejudice</em>, <em>Mansfield Park</em>, <em>Emma</em>, and <em>Persuasion</em>, along with a short biography of Austen. The Fall 2026 section of British Authors focuses on the Brontë sisters.</p></details>
-      </div>
-
-      <p class="footnote">Topics vary by semester. See the full <a href="https://cah.ucf.edu/english/courses/">course schedule</a>.</p>
-    </div>
-  </section>
-
-  <!-- Distinctions -->
-  <section class="section" id="distinctions" aria-labelledby="distinctions-title">
-    <div class="container">
-      <h2 class="section-title" id="distinctions-title">Distinctions</h2>
-      <p class="section-intro">Opportunities for undergraduates beyond the classroom. Select one to read more.</p>
-
-      <div class="card-grid">
-        <details class="card plain"><summary><span class="ctitle">Honors Undergraduate Thesis</span><span class="teaser">UCF's oldest undergraduate research program, established in 1989.</span></summary>
-          <p>Students work one-on-one with a faculty member, design an independent reading project, take a graduate seminar or workshop, and write a critical, creative, or technical thesis. The thesis is defended and published online through the UCF Libraries.</p>
-          <p>To apply, students need 12 upper-division credit hours at UCF, an overall GPA of at least 3.4, an English GPA of at least 3.5, and a faculty member willing to serve as thesis advisor.</p>
-          <p><a href="https://cah.ucf.edu/english/undergraduate/honors/">Honors Undergraduate Thesis</a></p></details>
-        <details class="card plain"><summary><span class="ctitle">Literary Journals</span><span class="teaser">Edit The Florida Review and The Cypress Dome.</span></summary>
-          <p>In CRW 4724, students intern with <a href="https://floridareview.cah.ucf.edu/">The Florida Review</a>, UCF's national literary journal, evaluating real submissions and helping produce each issue.</p>
-          <p>In CRW 3950, students edit The Cypress Dome, UCF's student literary journal, across two semesters.</p></details>
-        <details class="card plain"><summary><span class="ctitle">Study Abroad</span><span class="teaser">Exchange programs in England and Australia.</span></summary>
-          <p>The University of Surrey is in Guildford, England, about 40 minutes by train from London. The University of Canberra is in Australia's capital, between Sydney and Melbourne, and is open to English majors and minors for English course credit.</p>
-          <p><a href="https://cah.ucf.edu/english/undergraduate/study-abroad/">Study abroad programs</a></p></details>
-        <details class="card plain"><summary><span class="ctitle">Student Organizations</span><span class="teaser">Honor society, literary community, and writing groups.</span></summary>
-          <p>UCF's Zeta Xi chapter of Sigma Tau Delta, the National English Honor Society, has been active since 1980. The Cypress Dome Society publishes a literary magazine and runs Writers in the Sun, a reading series that brings nationally acclaimed authors to UCF.</p>
-          <p>Students can also join Future Technical Communicators, Writers Uknighted, and the Young Poets' Society.</p>
-          <p><a href="https://cah.ucf.edu/english/undergraduate/organizations/">Student organizations</a></p></details>
-        <details class="card plain"><summary><span class="ctitle">Scholarships</span><span class="teaser">Department awards for English students.</span></summary>
-          <p>Department scholarships include the Frances R. Lefkowitz Endowed Scholarship ($2,500), the Melissa Pellegrin Memorial Scholarship for Technical Communication ($1,250), the Patricia Angley Memorial Scholarship ($1,000), and the Jean C. Combs Scholarship ($300).</p>
-          <p><a href="https://cah.ucf.edu/english/scholarships/">Scholarship details</a></p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- Careers -->
-  <section class="section paper" id="careers" aria-labelledby="careers-title">
-    <div class="container careers">
-      <div>
-        <h2 class="section-title" id="careers-title">Careers</h2>
-        <p class="section-intro" style="margin-bottom:1rem">English graduates work in law, editing and publishing, teaching, business, nonprofits, consulting, and information technology. Many also continue to graduate school.</p>
-        <a href="https://cah.ucf.edu/english/undergraduate/#careers">Explore salaries and job data</a>
-      </div>
-      <ul class="career-list">
-        <li>Author</li>
-        <li>Editor</li>
-        <li>Technical writer</li>
-        <li>Teacher</li>
-        <li>Reporter</li>
-        <li>Public relations specialist</li>
-        <li>Legal assistant</li>
-        <li>Search marketing strategist</li>
-        <li>Librarian</li>
-        <li>Fundraiser</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Apply -->
-  <section class="apply" id="apply" aria-labelledby="apply-title">
-    <div class="container">
-      <h2 class="section-title" id="apply-title">Apply</h2>
-      <p>Apply to UCF and select English as your intended major. For questions about the program, contact the department at <a href="mailto:English@ucf.edu">English@ucf.edu</a> or 407-823-5596.</p>
-      <div class="btn-row" style="margin-top:1.5rem">
-        <a class="btn" href="https://www.ucf.edu/admissions/undergraduate/">Apply to UCF</a>
-        <a class="btn outline" href="https://cah.ucf.edu/english/">Department of English</a>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <div class="container">
-    <p>Department of English, College of Arts and Humanities, University of Central Florida</p>
-    <p>Program details come from the <a href="https://www.ucf.edu/catalog/undergraduate/">2026–2027 UCF Undergraduate Catalog</a> and the <a href="https://cah.ucf.edu/english/">Department of English</a> website. The catalog is the official source for degree requirements.</p>
-  </div>
-</footer>
-
-<script src="assets/site.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.4/p5.min.js"></script>
+<script src="assets/sketch.js"></script>
 </body>
 </html>
