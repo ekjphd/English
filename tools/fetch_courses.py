@@ -47,7 +47,28 @@ def page_settings():
 def paragraphs(raw):
     text = re.sub(r'<\s*(br|/p|/div|/li|/h\d)\b[^>]*>', '\n', raw or '', flags=re.I)
     text = html.unescape(re.sub(r'<[^>]+>', '', text)).replace('\xa0', ' ')
-    return [re.sub(r'\s+', ' ', p).strip() for p in text.split('\n') if p.strip()]
+    lines = [re.sub(r'\s+', ' ', p).strip() for p in text.split('\n') if p.strip()]
+    # Many descriptions are hard-wrapped mid-sentence. Rejoin a line with the next unless the line
+    # ends a sentence or the next line starts a list item.
+    out = []
+    for line in lines:
+        tag_then_sentence = out and not re.search('[a-z]', out[-1]) and re.match(r'\S*[a-z]', line)
+        if out and not END_OF_SENTENCE.search(out[-1]) and not LIST_ITEM.match(line) and not tag_then_sentence:
+            out[-1] += ' ' + line
+        elif out and line[0].islower():
+            out[-1] += ' ' + line
+        else:
+            out.append(line)
+    # The site does not show when a course is offered, so drop the semester from labels
+    # such as "SUMMER 2026 TOPIC:" and keep the label itself.
+    return [TERM_LABEL.sub(lambda m: m.group(1).capitalize() + ':', p) for p in out]
+
+
+TERM_LABEL = re.compile(r'^(?:spring|summer|fall)\s+\d{4}\s+(topics?|author)\s*:', re.I)
+
+
+END_OF_SENTENCE = re.compile(r'[.!?:;)\]"”’]$')
+LIST_ITEM = re.compile(r'^(\d+[.)]|[-•*–])\s')
 
 
 def term_key(term):
@@ -86,14 +107,10 @@ def main():
         groups = sorted(c['groups'].values(), key=lambda g: min(term_key(t) for t in g['terms']))
         out[code] = {
             'title': c['title'],
-            'terms': sorted(c['terms'], key=term_key),
-            'descriptions': [
-                {'terms': sorted(g['terms'], key=term_key), 'modes': sorted(g['modes']), 'paragraphs': g['paragraphs']}
-                for g in groups
-            ],
+            'descriptions': [g['paragraphs'] for g in groups],
         }
 
-    data = {'source': PAGE, 'range': f"{cfg['start'].title()} to {cfg['end'].title()}", 'courses': out}
+    data = {'source': PAGE, 'courses': out}
     OUT.write_text(json.dumps(data, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     described = sum(1 for c in out.values() if c['descriptions'])
     print(f'Wrote {len(out)} courses ({described} with descriptions) to {OUT}')
